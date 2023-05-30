@@ -1,0 +1,110 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "calculadora basica",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SumarIntent",
+          "slots": [
+            {
+              "name": "numeroUno",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "numeroDos",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "suma {numeroUno} y {numeroDos}",
+            "sumar {numeroUno} y {numeroDos}",
+            "cuánto es la suma de {numeroUno} más {numeroDos}"
+          ]
+        },
+        {
+          "name": "RestarIntent",
+          "slots": [
+            {
+              "name": "numeroUno",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "numeroDos",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "resta {numeroUno} y {numeroDos}",
+            "restar {numeroUno} y {numeroDos}",
+            "cuánto es la resta de {numeroUno} menos {numeroDos}"
+          ]
+        },
+        {
+          "name": "MultiplicarIntent",
+          "slots": [
+            {
+              "name": "numeroUno",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "numeroDos",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "multiplica {numeroUno} por {numeroDos}",
+            "multiplicar {numeroUno} por {numeroDos}",
+            "cuánto es la multiplicación de {numeroUno} por {numeroDos}"
+          ]
+        },
+        {
+          "name": "DividirIntent",
+          "slots": [
+            {
+              "name": "numeroUno",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "numeroDos",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "divide {numeroUno} entre {numeroDos}",
+            "dividir {numeroUno} entre {numeroDos}",
+            "cuánto es la división de {numeroUno} entre {numeroDos}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "8"
+}

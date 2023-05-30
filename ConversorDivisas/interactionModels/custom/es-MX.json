@@ -1,0 +1,69 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "calculadora divisas",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CustonDivisass",
+          "slots": [
+            {
+              "name": "cantidad",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "pesoOrigen",
+              "type": "Monedas"
+            },
+            {
+              "name": "pesoDestino",
+              "type": "Monedas"
+            }
+          ],
+          "samples": [
+            "convierte {cantidad} {pesoOrigen} a {pesoDestino}",
+            "cuanto es de {cantidad} {pesoOrigen} a {pesoDestino}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "USD"
+              }
+            },
+            {
+              "name": {
+                "value": "EUR"
+              }
+            },
+            {
+              "name": {
+                "value": "MXN"
+              }
+            }
+          ],
+          "name": "Monedas"
+        }
+      ]
+    }
+  },
+  "version": "5"
+}
