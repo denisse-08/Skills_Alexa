@@ -1,0 +1,84 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "asistente denisse",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "Custom_Pokemon",
+          "slots": [
+            {
+              "name": "pokemon",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "que sabes sobre {pokemon}",
+            "hablame sobre {pokemon}",
+            "cuentame sobre {pokemon}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "Custom_Pokemon",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "pokemon",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.293084264762.1585516536894"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.293084264762.1585516536894",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No tengo referencias de este Pokemon, podrias indicar otro por favor "
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
