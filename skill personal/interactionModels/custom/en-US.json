@@ -1,0 +1,135 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "accion",
+              "elicitationRequired": true,
+              "type": "acciones",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1614090613712.51486803393"
+              }
+            }
+          ],
+          "name": "informacion",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "cancel",
+            "cancel that",
+            "stop"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help",
+            "need help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop",
+            "please stop"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "HelloIntent",
+          "samples": [
+            "hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "accion",
+              "type": "acciones",
+              "samples": [
+                "what are the {accion} for heat stroke",
+                "can you {accion} about heat stroke"
+              ]
+            }
+          ],
+          "name": "informacion",
+          "samples": [
+            "can you {accion} about heat stroke",
+            "what are the {accion} for heat stroke",
+            "how to {accion} for heat stroke",
+            "please {accion} about heat stroke"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ClimaIntent",
+          "samples": [
+            "How\u0027s the weather",
+            "Tell me the weather",
+            "What\u0027s the current temperature",
+            "What\u0027s the temperature like"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "inform",
+                  "provide information",
+                  "tell me about"
+                ],
+                "value": "inform"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "protect",
+                  "take care",
+                  "prevent"
+                ],
+                "value": "protect"
+              }
+            },
+            {
+              "name": {
+                "value": "symptoms"
+              }
+            }
+          ],
+          "name": "acciones"
+        }
+      ],
+      "invocationName": "heat stroke"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Alright, but what would you like to know"
+          }
+        ],
+        "id": "Elicit.Slot.1614090613712.51486803393"
+      }
+    ]
+  }
+}
